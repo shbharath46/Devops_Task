@@ -17,7 +17,7 @@ install_netcat()
     fi
     echo "netcat installed successfully"
 }
-tsh() { 
+install_tsh() { 
    apt update -y
    sudo curl https://apt.releases.teleport.dev/gpg \
 -o /usr/share/keyrings/teleport-archive-keyring.asc
@@ -34,4 +34,4 @@ if [ $? -ne 0 ]; then
 }
 install_awscli
 install_netcat
-tsh
+install_tsh
